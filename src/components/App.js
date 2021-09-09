@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header';
 
 
  class App extends React.Component {
@@ -10,7 +11,9 @@ import axios from 'axios';
 	 }
 
 	 render() {
-		 return <div>App</div>;
+		 return (
+		 	<Header />
+		 )
 	 }
  };
 
