@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Header from './Header';
+import Hero from './Hero';
 
 
  class App extends React.Component {
@@ -12,7 +13,10 @@ import Header from './Header';
 
 	 render() {
 		 return (
-		 	<Header />
+			 <div>
+				 <Header />
+				 <Hero />
+			 </div>
 		 )
 	 }
  };

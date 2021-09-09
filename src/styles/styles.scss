@@ -1,3 +1,25 @@
+/* Mobile */
+@media only screen and (max-width: 480px) {
+	body {
+		background-color: red;
+	}
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 1024px) {
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 1440px) {
+
+}
+
 @font-face {
 	font-family: ACaslonPro;
 	src: url("../fonts/ACaslonPro-Regular.otf") format("opentype");
@@ -10,4 +32,48 @@
 
 body {
 	font-family: 'ACaslonPro';
+}
+
+.header {
+	display: inline-flex;
+	height: 100px;
+	position: fixed;
+	right: 8%;
+	left: 8%;
+	z-index: 1;
+
+	img {
+		height: 50px;
+		margin: 0;
+		position: relative;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	button {
+		position: relative;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		font-size: 12px;
+		background-color: white;
+		border: white;
+		cursor: pointer;
+	}
+
+	div {
+		position: relative;
+		margin: auto;
+		font-size: 12px;
+		width: 100%;
+		text-align: right;
+	}
+}
+
+.hero {
+	position: relative;
+	top: 100px;
+	height: 5000px;
+	background-color: gray;
 }
