@@ -8,6 +8,7 @@ class Header extends React.Component {
 				<img src={Logo} alt='logo' />
 				<div>212.555.555</div>
 				<button>LOGIN</button>
+				<button className='sandwich'></button>
 			</div>
 		)
 	}
