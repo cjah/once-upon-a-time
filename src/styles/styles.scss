@@ -15,15 +15,16 @@ body {
 
 .header {
 	display: inline-flex;
-	height: 100px;
+	height: 120px;
 	position: fixed;
-	right: 8%;
-	left: 8%;
+	padding-left: 8%;
+	padding-right: 8%;
 	z-index: 1;
+	background-color: white;
+	width: -webkit-fill-available;
 
 	img {
-		height: 50px;
-		margin: 0;
+		height: 36px;
 		position: relative;
 		top: 50%;
 		-ms-transform: translateY(-50%);
@@ -32,32 +33,39 @@ body {
 
 	button {
 		position: relative;
-		top: 50%;
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
 		font-size: 12px;
 		background-color: white;
 		border: white;
 		cursor: pointer;
+		display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 10px;
 	}
 
 	div {
 		position: relative;
-		margin: auto;
 		font-size: 12px;
 		width: 100%;
-		text-align: right;
+		display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 2px;
+    margin-right: 10px;
 	}
 	.sandwich {
 		height: 20px;
 		width: 20px;
 		background-color:black;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 }
 
 .hero {
 	position: relative;
-	top: 100px;
+	top: 120px;
 	height: 5000px;
 	background-color: gray;
 }
@@ -72,10 +80,17 @@ body {
 		display: inline-flex;
 		height: 50px;
 		position: fixed;
-		right: 8%;
-		left: 8%;
+		padding-left: 5%;
+		padding-right: 5%;
 		z-index: 1;
+		background-color: white;
+		width: -webkit-fill-available;
+
+		img {
+			height: 24px;
+		}
 	}
+
 
 	.hero {
 		position: relative;

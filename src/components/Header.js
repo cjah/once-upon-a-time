@@ -6,7 +6,7 @@ class Header extends React.Component {
 		return (
 			<div className='header'>
 				<img src={Logo} alt='logo' />
-				<div>212.555.555</div>
+				<div>212.555.5555</div>
 				<button>LOGIN</button>
 				<button className='sandwich'></button>
 			</div>
