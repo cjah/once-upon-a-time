@@ -8,7 +8,7 @@ class HeroImage extends React.Component {
 		var imageArr = [];
 		if (this.props.heroData) {
 			imageArr = this.props.heroData.map((src, i) => {
-				return i === 0 ? <img src={src.image} alt={src.alt} className="active" key={src.alt} /> : <img src={src.image} alt={src.alt} key={src.alt} />
+				return i === 0 ? <div src={src.image} alt={src.alt} className="heroImage active" style={{ backgroundImage: "url(" + src.image + ")" }} key={src.alt} /> : <div className="heroImage" style={{ backgroundImage: "url(" + src.image + ")" }} src={src.image} alt={src.alt} key={src.alt} />
 			});
 		}
 

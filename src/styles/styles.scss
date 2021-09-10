@@ -66,9 +66,10 @@ body {
 .hero {
 	position: relative;
 	top: 120px;
-	height: 5000px;
 	background-color: gray;
 	color: white;
+	max-width: 1440px;
+	margin: auto;
 
 	.shade {
 		width: 100%;
@@ -79,20 +80,22 @@ body {
 		left: 0;
 	}
 
-	img {
+	.heroImage {
 		display: none;
 	}
 
-	img.active {
+	.heroImage.active {
 		display: flex;
-		margin: auto;
+		background-size: cover;
+    background-position: center center;
+    height: 580px;
 	}
 
 	.heroText {
 		display: inline-grid;
 		width: 40%;
 		position: absolute;
-		top: 4.3%;
+		bottom: 20%;
 		left: 12%;
 		color: white;
 
@@ -152,10 +155,9 @@ body {
 	.hero {
 		position: relative;
 		top: 50px;
-		height: 5000px;
 		background-color: gray;
 
-		img.active {
+		.heroImage.active {
 			display: block;
 			height: calc(100vw * 3 / 4);
 		}
@@ -164,7 +166,7 @@ body {
 			display: inline-grid;
 			width: 40%;
 			position: absolute;
-			top: 4.3%;
+			bottom: 20%;
 			left: 12%;
 			color: white;
 	
@@ -190,7 +192,7 @@ body {
 
 /* Small Tablet */
 @media only screen and (max-width: 733.33px) {
-	img.active {
+	.heroImage.active {
 		display: block;
 		height: calc(100vw * 3 / 4);
 	}
@@ -205,5 +207,8 @@ body {
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
-
+	.heroText {
+		bottom: 20%;
+		left: 200px;
+	}
 }
