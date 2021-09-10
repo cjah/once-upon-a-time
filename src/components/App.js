@@ -5,20 +5,23 @@ import Hero from './Hero';
 
 
  class App extends React.Component {
+	state = {};
+
 	 async componentDidMount() {
 		 const response = await axios.get('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge');
 
 		 console.log(response.data);
-	 }
+		 this.setState({ heroData: response.data.hero_slides, heroText: response.data.hero_text, cards: response.data.cards });
+	 };
 
 	 render() {
 		 return (
 			 <div>
 				 <Header />
-				 <Hero />
+				 <Hero heroData={this.state.heroData} heroText={this.state.heroText} />
 			 </div>
 		 )
-	 }
+	 };
  };
 
  export default App;
