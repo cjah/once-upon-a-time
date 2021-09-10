@@ -17,10 +17,10 @@ class HeroImage extends React.Component {
 		var imageArr = [], thumbnails = [];
 		if (this.props.heroData) {
 			imageArr = this.props.heroData.map((src, i) => {
-				return i === this.state.activeIndex ? <div className="heroImage active" style={{ backgroundImage: "url(" + src.image + ")", ariaLabel: src.alt }} key={src.alt} ref={i} /> : <div className="heroImage" style={{ backgroundImage: "url(" + src.image + ")", ariaLabel: src.alt }} key={src.alt} ref={i} />
+				return <div className={i === this.state.activeIndex ? 'heroImage active' : 'heroImage'} style={{ backgroundImage: "url(" + src.image + ")", ariaLabel: src.alt }} key={src.alt} ref={i} />
 			});
 			thumbnails = this.props.heroData.map((el, i) => {
-				return <li ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
+				return <li className={i === this.state.activeIndex ? 'activeThumbnail' : ''} ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
 			});
 		}
 
