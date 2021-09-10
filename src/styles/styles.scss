@@ -93,7 +93,7 @@ body {
 
 	.heroText {
 		display: inline-grid;
-		width: 40%;
+		width: 72%;
 		position: absolute;
 		bottom: 20%;
 		left: 12%;
@@ -164,44 +164,60 @@ body {
 
 		.heroText {
 			display: inline-grid;
-			width: 40%;
+			width: 78%;
 			position: absolute;
-			bottom: 20%;
+			bottom: 8%;
 			left: 12%;
 			color: white;
 	
 			.heroTitle {
-				font-size: 58px;
+				font-size: 36px;
 				font-family: 'Springville';
-				line-height: 58px;
+				line-height: 36px;
 			}
 	
 			.heroDate {
-				font-size: 32px;
+				font-size: 18px;
 			}
 	
 			.heroSubtitle {
-				font-size: 18px;
+				font-size: 12px;
 				width: 80%;
-				line-height: 24px;
+				line-height: 14px;
 			}
-	
 		}
 	}
 }
 
 /* Small Tablet */
 @media only screen and (max-width: 733.33px) {
-	.heroImage.active {
-		display: block;
-		height: calc(100vw * 3 / 4);
+	.hero {
+		.heroImage.active {
+			display: block;
+			height: calc(100vw * 3 / 4);
+		}
 	}
 }
 @media only screen and (max-width: 768px) {
+	.hero {
+		.heroText {
+			.heroTitle {
+				font-size: 36px;
+				line-height: 36px;
+			}
+			.heroDate {
+				font-size: 18px;
+			}
+			.heroSubtitle {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+	}
 }
 
 /* Tablet */
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 
 }
 
