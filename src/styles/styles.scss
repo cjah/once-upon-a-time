@@ -68,6 +68,16 @@ body {
 	top: 120px;
 	height: 5000px;
 	background-color: gray;
+	color: white;
+
+	.shade {
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
 	img {
 		display: none;
@@ -75,6 +85,33 @@ body {
 
 	img.active {
 		display: flex;
+		margin: auto;
+	}
+
+	.heroText {
+		display: inline-grid;
+		width: 40%;
+		position: absolute;
+		top: 4.3%;
+		left: 12%;
+		color: white;
+
+		.heroTitle {
+			font-size: 58px;
+			font-family: 'Springville';
+			line-height: 58px;
+		}
+
+		.heroDate {
+			font-size: 32px;
+		}
+
+		.heroSubtitle {
+			font-size: 18px;
+			width: 80%;
+			line-height: 24px;
+		}
+
 	}
 
 	ol {
@@ -117,12 +154,48 @@ body {
 		top: 50px;
 		height: 5000px;
 		background-color: gray;
+
+		img.active {
+			display: block;
+			height: calc(100vw * 3 / 4);
+		}
+
+		.heroText {
+			display: inline-grid;
+			width: 40%;
+			position: absolute;
+			top: 4.3%;
+			left: 12%;
+			color: white;
+	
+			.heroTitle {
+				font-size: 58px;
+				font-family: 'Springville';
+				line-height: 58px;
+			}
+	
+			.heroDate {
+				font-size: 32px;
+			}
+	
+			.heroSubtitle {
+				font-size: 18px;
+				width: 80%;
+				line-height: 24px;
+			}
+	
+		}
 	}
 }
 
 /* Small Tablet */
-@media only screen and (min-width: 768px) {
-
+@media only screen and (max-width: 733.33px) {
+	img.active {
+		display: block;
+		height: calc(100vw * 3 / 4);
+	}
+}
+@media only screen and (max-width: 768px) {
 }
 
 /* Tablet */
