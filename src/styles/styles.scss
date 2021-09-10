@@ -69,6 +69,14 @@ body {
 	height: 5000px;
 	background-color: gray;
 
+	img {
+		display: none;
+	}
+
+	img.active {
+		display: flex;
+	}
+
 	ol {
 		li {
 			cursor: pointer;
