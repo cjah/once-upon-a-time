@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Hero from './Hero';
+import MasonryGrid from './MasonryGrid';
 
 
  class App extends React.Component {
@@ -19,6 +20,7 @@ import Hero from './Hero';
 			 <div>
 				 <Header />
 				 <Hero heroData={this.state.heroData} heroText={this.state.heroText} />
+				 <MasonryGrid cards={this.state.cards} />
 			 </div>
 		 )
 	 };

@@ -10,10 +10,8 @@ class HeroImage extends React.Component {
 	}
 
 	render() {
-		console.log('in HeroImage')
-		console.log(this.props.heroData)
-
 		var imageArr = [], thumbnails = [];
+		
 		if (this.props.heroData) {
 			clearTimeout(this.state.timeout);
 			this.state.timeout = setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000);
