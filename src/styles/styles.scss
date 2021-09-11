@@ -298,6 +298,7 @@ body {
 					margin-left: 0px;
 					margin-right: 0px;
 					max-width: none;
+					padding-bottom: 40px;
 				}
 			}
 		}
@@ -401,5 +402,29 @@ body {
 	.masonryGrid {
 		top:50px;
 		grid-template-columns: 1fr;
+		padding-right: 50px;
+		padding-left: 50px;
+		.cardColumn {
+			.card {
+				width: 100%;
+				
+				.cardImage {
+					width: 100%;
+				}
+				
+				.cardDate {
+					width: 100%;
+				}
+
+				.cardTitle {
+					width: 100%;
+				}
+
+				.cardAuthor {
+					width: 100%;
+				}
+			}
+		}
 	}
+
 }
