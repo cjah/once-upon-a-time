@@ -22,6 +22,8 @@ body {
 	z-index: 1;
 	background-color: white;
 	width: -webkit-fill-available;
+	font-family: 'Arial';
+	color: #808080;
 
 	img {
 		height: 36px;
@@ -40,7 +42,8 @@ body {
 		display: flex;
     justify-content: right;
     align-items: center;
-    margin-right: 10px;
+		margin-right: 10px;
+		color: #808080;
 	}
 
 	div {
@@ -148,9 +151,9 @@ body {
 	margin-top: 90px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px;
-	padding-right: 3%;
-	padding-left: 3%;
+	grid-gap: 10px;
+	padding-right: 5%;
+	padding-left: 5%;
 	//grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   align-items: flex-start;
 
@@ -161,9 +164,46 @@ body {
 			display: grid;
 			margin: 0 auto;
 			max-width: calc(100vw * 2/7);
+			//max-width: calc(100vw * 1/4);
+			border-bottom: 1px solid #cccccc;
+			margin-bottom: 40px;
 
-			img {
-				max-width: calc(100vw * 2/7);
+			.cardImage {
+				width: calc(100vw * 2/7 - 30px);
+    		padding: 15px;
+				//margin: 0 auto;
+				//max-width: calc(100vw * 1/4);
+			}
+
+			.cardDate {
+				font-family: 'Arial';
+				font-size: 12px;
+				padding: 15px;
+				padding-bottom: 18px;
+				padding-top: 30px;
+				width: calc(100vw * 2/7 - 30px);
+				color: #808080;
+			}
+
+			.cardTitle {
+				font-family: 'Springville';
+				font-size: 50px;
+				line-height: 58px;
+				width: calc(100vw * 2/7 - 30px);
+    		padding: 15px;
+				padding-bottom: 10px;
+				&:hover {
+					text-underline-offset: 3px;
+    			text-decoration: underline;
+					text-decoration-thickness: 3px;
+					cursor: pointer;
+				}
+			}
+			.cardAuthor {
+				width: calc(100vw * 2/7 - 30px);
+    		padding: 15px;
+				padding-bottom: 50px;
+				font-size: 16px;
 			}
 		}
 	}
@@ -174,6 +214,35 @@ body {
 	.heroText {
 		bottom: 20%;
 		left: 200px;
+	}
+
+	/*.masonryGrid {
+		//padding-right: 7%;
+		//padding-left: 7%;
+	
+		.cardColumn {
+			display: grid;
+	
+			.card {
+				max-width: calc(100vw * 1/4);
+	
+				img {
+					max-width: calc(100vw * 1/4);
+				}
+			}
+		}
+	} */
+}
+@media only screen and (max-width: 1440px) {
+	.masonryGrid {
+		.cardColumn {
+			.card {
+				.cardTitle {
+					font-size: 40px;
+					line-height: 40px;
+				}
+			}
+		}
 	}
 }
 
@@ -268,5 +337,9 @@ body {
 				line-height: 14px;
 			}
 		}
+	}
+
+	.masonryGrid {
+		top:50px;
 	}
 }
