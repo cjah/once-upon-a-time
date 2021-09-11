@@ -4,14 +4,13 @@ import Header from './Header';
 import Hero from './Hero';
 import MasonryGrid from './MasonryGrid';
 
-
  class App extends React.Component {
 	state = {};
 
 	 async componentDidMount() {
 		 const response = await axios.get('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge');
 
-		 console.log(response.data);
+		 console.log('data in App', response.data);
 		 this.setState({ heroData: response.data.hero_slides, heroText: response.data.hero_text, cards: response.data.cards });
 	 };
 

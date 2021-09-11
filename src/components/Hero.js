@@ -7,7 +7,6 @@ class Hero extends React.Component {
 		console.log('in Hero')
 		console.log(this.props)
 
-		//if (!this.props.heroText) return null;
 		var dateText = stringifyDates(this.props.heroText.date), title = this.props.heroText.title.slice(11), subtitle = this.props.heroText.subtitle;
 
 		return (
