@@ -23,7 +23,7 @@ body {
 	background-color: white;
 	width: -webkit-fill-available;
 	font-family: 'Arial';
-	color: #808080;
+	color: black;
 
 	img {
 		height: 36px;
@@ -35,7 +35,7 @@ body {
 
 	button {
 		position: relative;
-		font-size: 12px;
+		font-size: 11px;
 		background-color: white;
 		border: white;
 		cursor: pointer;
@@ -43,18 +43,20 @@ body {
     justify-content: right;
     align-items: center;
 		margin-right: 10px;
-		color: #808080;
+		color: black;
+		opacity: 0.65;
 	}
 
 	div {
 		position: relative;
-		font-size: 12px;
+		font-size: 11px;
 		width: 100%;
 		display: flex;
     justify-content: right;
     align-items: center;
     margin-top: 2px;
-    margin-right: 10px;
+		margin-right: 10px;
+		opacity: 0.7;
 	}
 
 	.sandwich {
@@ -136,11 +138,11 @@ body {
 			border-radius: 50%;
 			width: 10px;
 			height: 10px;
-			background: #e6e6e6;
+			background: #f2f2f2;
 		}
 
 		li.activeThumbnail {
-			background: #cccccc;
+			background: #d9d9d9;
 		}
 	}
 }
@@ -167,31 +169,37 @@ body {
 			//max-width: calc(100vw * 1/4);
 			border-bottom: 1px solid #cccccc;
 			margin-bottom: 40px;
+			//max-width: 480px;
 
 			.cardImage {
-				width: calc(100vw * 2/7 - 30px);
+				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
 				//margin: 0 auto;
 				//max-width: calc(100vw * 1/4);
+				max-width: 400px;
 			}
 
 			.cardDate {
 				font-family: 'Arial';
-				font-size: 12px;
+				font-size: 11px;
 				padding: 15px;
-				padding-bottom: 18px;
+				padding-bottom: 10px;
 				padding-top: 30px;
-				width: calc(100vw * 2/7 - 30px);
-				color: #808080;
+				width: calc(100vw * 2/7 - 50px);
+				color: black;
+				opacity: 0.5;
+				max-width: 400px;
 			}
 
 			.cardTitle {
 				font-family: 'Springville';
 				font-size: 50px;
 				line-height: 58px;
-				width: calc(100vw * 2/7 - 30px);
+				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
-				padding-bottom: 10px;
+				padding-bottom: 6px;
+				opacity: 0.8;
+				max-width: 400px;
 				&:hover {
 					text-underline-offset: 3px;
     			text-decoration: underline;
@@ -200,10 +208,12 @@ body {
 				}
 			}
 			.cardAuthor {
-				width: calc(100vw * 2/7 - 30px);
+				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
 				padding-bottom: 50px;
-				font-size: 16px;
+				font-size: 14px;
+				opacity: 0.7;
+				max-width: 400px;
 			}
 		}
 	}
@@ -306,7 +316,6 @@ body {
 	.hero {
 		position: relative;
 		top: 50px;
-		background-color: gray;
 
 		.heroImage.active {
 			display: block;
