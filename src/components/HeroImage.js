@@ -12,7 +12,7 @@ class HeroImage extends React.Component {
 	render() {
 		var imageArr = [], thumbnails = [];
 		
-		if (this.props.heroData) {
+		//if (this.props.heroData) {
 			clearTimeout(this.state.timeout);
 			this.state.timeout = setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000);
 
@@ -23,7 +23,7 @@ class HeroImage extends React.Component {
 			thumbnails = this.props.heroData.map((el, i) => {
 				return <li className={i === this.state.activeIndex ? 'activeThumbnail' : ''} ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
 			});
-		}
+		//}
 
 		return (
 			<div>
