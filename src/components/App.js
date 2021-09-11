@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import Hero from './Hero';
 import MasonryGrid from './MasonryGrid';
+import Footer from './Footer';
 
  class App extends React.Component {
 	state = {};
@@ -21,6 +22,7 @@ import MasonryGrid from './MasonryGrid';
 				 <Header />
 				 <Hero heroData={this.state.heroData} heroText={this.state.heroText} />
 				 <MasonryGrid cards={this.state.cards} />
+				 <Footer />
 			 </div>
 		 )
 	 };
