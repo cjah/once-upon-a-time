@@ -151,10 +151,16 @@ body {
 	grid-gap: 20px;
 	padding-right: 3%;
 	padding-left: 3%;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  align-items: flex-start;
 
-	.card {
-		//width: 200px;
-		margin: 0 auto;
+	.cardColumn {
+		display: grid;
+
+		.card {
+			display: grid;
+			margin: 0 auto;
+		}
 	}
 }
 

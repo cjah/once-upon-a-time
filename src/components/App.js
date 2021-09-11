@@ -16,6 +16,7 @@ import MasonryGrid from './MasonryGrid';
 	 };
 
 	 render() {
+		 if(!this.state.heroData) return null;
 		 return (
 			 <div>
 				 <Header />
