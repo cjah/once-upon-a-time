@@ -263,6 +263,8 @@ body {
 			font-family: 'ACaslonPro';
 			padding-left: 18px;
 			//padding-top: 20px;
+			color: black;
+			opacity: 0.6;
 		}
 	}
 
@@ -272,7 +274,7 @@ body {
     background: black;
 		border: none;
 		color: white;
-		padding-top: 8px;
+		padding-top: 7px;
 		font-family: 'ACaslonPro';
 		font-size: 16px;
 	}
@@ -280,7 +282,7 @@ body {
 	.socials {
 		font-size: 11px;
 		font-family: 'Arial';
-		padding-top: 40px;
+		padding-top: 50px;
 		
 		&:before {
 			content: '\00A9'
