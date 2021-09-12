@@ -44,7 +44,10 @@ body {
     align-items: center;
 		margin-right: 10px;
 		color: black;
-		opacity: 0.65;
+
+		&.loginButton {
+			opacity: 0.65;
+		}
 	}
 
 	div {
@@ -60,12 +63,24 @@ body {
 	}
 
 	.sandwich {
-		height: 20px;
-		width: 20px;
-		background-color:black;
+		height: 25px;
+		width: 25px;
+		//background-color:black;
 		top: 50%;
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
+		opacity: 1;
+		margin-left: 8px;
+
+		.lines {
+			width: 20px;
+			height: 0.5px;
+			background-color: black;
+			margin: 6px 0;
+			position: absolute;
+			opacity: 1;
+			color: black;
+		}
 	}
 }
 
@@ -219,6 +234,56 @@ body {
 				margin-right: 15px;
 				margin-left: 15px;
 			}
+		}
+	}
+}
+
+.footer {
+	top: 100px;
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	text-align: center;
+
+	.newsletter {
+		font-size: 18px;
+		padding-bottom: 20px;
+		opacity: 0.7;
+	}
+
+	.emailInput {
+		height: 30px;
+		width: 260px;
+		padding-top: 4px;
+		padding-bottom: 0px;
+		border: 1px solid black;
+		
+		&::placeholder {
+			font-size: 15px;
+			font-family: 'ACaslonPro';
+			padding-left: 18px;
+			//padding-top: 20px;
+		}
+	}
+
+	.emailButton {
+		height: 36px;
+    width: 110px;
+    background: black;
+		border: none;
+		color: white;
+		padding-top: 8px;
+		font-family: 'ACaslonPro';
+		font-size: 16px;
+	}
+	
+	.socials {
+		font-size: 11px;
+		font-family: 'Arial';
+		padding-top: 40px;
+		
+		&:before {
+			content: '\00A9'
 		}
 	}
 }
@@ -408,6 +473,11 @@ body {
 				}
 			}
 		}
+	}
+
+	.footer {
+		top: 50px;
+		padding-top: 20px;
 	}
 
 }

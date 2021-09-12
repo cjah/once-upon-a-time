@@ -7,8 +7,8 @@ class Header extends React.Component {
 			<div className='header'>
 				<img src={Logo} alt='logo' />
 				<div>212.555.5555</div>
-				<button>LOGIN</button>
-				<button className='sandwich'></button>
+				<button className="loginButton">LOGIN</button>
+				<button className='sandwich'><div className="lines" style={{ marginTop: '18px' }}></div><div className="lines" style={{ marginBottom: '18px' }}></div><div className="lines"></div></button>
 			</div>
 		)
 	}
