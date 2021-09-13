@@ -139,7 +139,6 @@ body {
 			line-height: 24px;
 			width: 458px;
 		}
-
 	}
 
 	ol {
@@ -171,10 +170,8 @@ body {
 	margin-top: 90px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	//grid-gap: 10px;
 	padding-right: 5%;
 	padding-left: 5%;
-	//grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   align-items: flex-start;
 
 	.cardColumn {
@@ -184,15 +181,11 @@ body {
 			display: grid;
 			margin: 0 auto;
 			max-width: calc(100vw * 2/7);
-			//max-width: calc(100vw * 1/4);
 			margin-bottom: 40px;
-			//max-width: 480px;
 
 			.cardImage {
 				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
-				//margin: 0 auto;
-				//max-width: calc(100vw * 1/4);
 				max-width: 400px;
 			}
 
@@ -215,8 +208,8 @@ body {
 				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
 				padding-bottom: 6px;
-				//opacity: 0.8;
 				max-width: 400px;
+
 				&:hover {
 					text-underline-offset: 3px;
     			text-decoration: underline;
@@ -224,6 +217,7 @@ body {
 					cursor: pointer;
 				}
 			}
+
 			.cardAuthor {
 				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
@@ -251,7 +245,7 @@ body {
 	.newsletter {
 		font-size: 18px;
 		padding-bottom: 20px;
-		opacity: 0.7;
+		opacity: 0.72;
 	}
 
 	.emailInput {
@@ -265,10 +259,6 @@ body {
 		font-size: 15px;
 		
 		&::placeholder {
-			//font-size: 15px;
-			//font-family: 'ACaslonPro';
-			//padding-left: 8px;
-			//padding-top: 20px;
 			color: black;
 			opacity: 0.6;
 		}
@@ -316,6 +306,7 @@ body {
 		left: 200px;
 	}
 }
+
 @media only screen and (max-width: 1440px) {
 	.masonryGrid {
 		.cardColumn {
@@ -410,6 +401,7 @@ body {
 			display: block;
 			height: calc(100vw * 3 / 4);
 		}
+
 		.shade {
 			height: calc(100vw * 3 / 4);
 		}
@@ -477,6 +469,7 @@ body {
 		grid-template-columns: 1fr;
 		padding-right: 40px;
 		padding-left: 40px;
+
 		.cardColumn {
 			.card {
 				width: 100%;
@@ -539,9 +532,11 @@ body {
 				height: 1px;
 				margin: 2px;
 			}
+
 			.lines:nth-child(1) {
 				margin-top: 14px;
 			}
+
 			.lines:nth-child(2) {
 				margin-top: 8px;
 			}
@@ -578,9 +573,11 @@ body {
 				height: 1px;
 				margin: 2px;
 			}
+
 			.lines:nth-child(1) {
 				margin-top: 14px;
 			}
+			
 			.lines:nth-child(2) {
 				margin-top: 8px;
 			}
