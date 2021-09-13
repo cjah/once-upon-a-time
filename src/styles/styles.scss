@@ -209,7 +209,7 @@ body {
 				padding-top: 30px;
 				width: calc(100vw * 2/7 - 50px);
 				color: black;
-				opacity: 0.6;
+				opacity: 0.53;
 				max-width: 400px;
 			}
 
@@ -220,12 +220,12 @@ body {
 				width: calc(100vw * 2/7 - 50px);
     		padding: 15px;
 				padding-bottom: 6px;
-				opacity: 0.8;
+				//opacity: 0.8;
 				max-width: 400px;
 				&:hover {
 					text-underline-offset: 3px;
     			text-decoration: underline;
-					text-decoration-thickness: 3px;
+					text-decoration-thickness: 2.5px;
 					cursor: pointer;
 				}
 			}
@@ -234,7 +234,7 @@ body {
     		padding: 15px;
 				padding-bottom: 50px;
 				font-size: 14px;
-				opacity: 0.7;
+				opacity: 0.67;
 				max-width: 400px;
 				border-bottom: 1px solid #cccccc;
 				padding-left: 0px;
