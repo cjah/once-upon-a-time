@@ -15,7 +15,7 @@ class MasonryGrid extends React.Component {
 			else comparison = -1;
 			return comparison;
 		});
-	}
+	};
 
 	buildDesktop = (cards) => {
 		const columnsArr = [[],[],[]];
@@ -25,7 +25,7 @@ class MasonryGrid extends React.Component {
 		});
 
 		return columnsArr.map((cards, i) => <CardColumn cards={cards} key={i} />);
-	}
+	};
 
 	buildTablet = (cards) => {
 		const columnsArr = [[],[]];
@@ -35,7 +35,7 @@ class MasonryGrid extends React.Component {
 		});
 
 		return columnsArr.map((cards, i) => <CardColumn cards={cards} key={i} />);
-	}
+	};
 
 	buildMobile = (cards) => {
 		const columnsArr = [];
@@ -45,7 +45,7 @@ class MasonryGrid extends React.Component {
 		});
 
 		return <CardColumn cards={columnsArr} />;
-	}
+	};
 
 	render() {
 		const { breakpoints, currentBreakpoint, cards } = this.props;
@@ -71,14 +71,14 @@ class MasonryGrid extends React.Component {
 			default:
 				console.log('default')
 				break;
-		}
+		};
 
 		return (
 			<div className="masonryGrid">
 				{cardColArr}
 			</div>
-		)
-	}
-}
+		);
+	};
+};
 
 export default withBreakpoints(MasonryGrid);

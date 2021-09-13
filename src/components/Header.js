@@ -9,7 +9,7 @@ const Header = () => {
 			<button className="loginButton">LOGIN</button>
 			<button className='sandwich'><div className="lines"></div><div className="lines"></div><div className="lines"></div></button>
 		</div>
-	)
+	);
 };
 
 export default Header;

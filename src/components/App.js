@@ -16,6 +16,7 @@ import Footer from './Footer';
 
 	 render() {
 		 if(!this.state.heroData) return null;
+
 		 return (
 			 <div>
 				 <Header />
@@ -23,7 +24,7 @@ import Footer from './Footer';
 				 <MasonryGrid cards={this.state.cards} />
 				 <Footer />
 			 </div>
-		 )
+		 );
 	 };
  };
 

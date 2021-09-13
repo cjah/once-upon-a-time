@@ -9,7 +9,7 @@ const Card = ({ cardData }) => {
 				<div className="cardTitle">{cardData.title}</div>
 				<div className="cardAuthor">Presented by <span style={{ borderBottom: '1px solid #000', paddingBottom: '2px' }}>{cardData.author.toUpperCase()}</span></div>
 			</div>
-		)
-}
+		);
+};
 
 export default Card;

@@ -16,7 +16,7 @@ const Hero = ({ heroText, heroData }) => {
 				<div className="heroSubtitle">{subtitle}</div>
 			</div>
 		</div>
-	)
+	);
 };
 
 export default Hero;
