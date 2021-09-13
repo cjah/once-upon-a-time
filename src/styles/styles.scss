@@ -104,6 +104,16 @@ body {
 		left: 0;
 	}
 
+	.outerLayer {
+		width: 100%;
+		height: 580px;
+		//background: rgba(0,0,0,0.4);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
 	.heroImage {
 		display: none;
 	}
@@ -405,6 +415,10 @@ body {
 		.shade {
 			height: calc(100vw * 3 / 4);
 		}
+
+		.outerLayer {
+			height: calc(100vw * 3 / 4);
+		}
 	}
 }
 
@@ -577,7 +591,7 @@ body {
 			.lines:nth-child(1) {
 				margin-top: 14px;
 			}
-			
+
 			.lines:nth-child(2) {
 				margin-top: 8px;
 			}
