@@ -66,11 +66,6 @@ body {
 	.sandwich {
 		height: 25px;
 		width: 25px;
-		//background-color:black;
-		//top: 50%;
-		//-ms-transform: translateY(-50%);
-		//transform: translateY(-50%);
-		//opacity: 1;
 		margin-left: 10px;
     margin-top: 47px;
 
@@ -520,4 +515,98 @@ body {
 	.header {
 		width: -moz-available;
 	}
+
+	.footer {
+		.emailButton {
+			padding-top: 6px;
+		}
+	}
 }
+
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+	.header {
+		div {
+			display: grid;
+		}
+
+		.sandwich {
+			margin-top: 40px;
+	
+			.lines {
+				height: 1px;
+				margin: 2px;
+			}
+			.lines:nth-child(1) {
+				margin-top: 14px;
+			}
+			.lines:nth-child(2) {
+				margin-top: 8px;
+			}
+		}
+	}
+
+	.footer {
+		.emailButton {
+			padding-top: 6px;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.header {
+			.sandwich {
+				margin-top: 5px;
+			}
+		}
+	}
+}}
+
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm){ 
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+	.header {
+		div {
+			display: grid;
+		}
+
+		.sandwich {
+			margin-top: 40px;
+	
+			.lines {
+				height: 1px;
+				margin: 2px;
+			}
+			.lines:nth-child(1) {
+				margin-top: 14px;
+			}
+			.lines:nth-child(2) {
+				margin-top: 8px;
+			}
+		}
+	}
+
+	.footer {
+		.emailButton {
+			padding-top: 6px;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		.header {
+			.sandwich {
+				margin-top: 5px;
+			}
+		}
+	}
+}}
+
+/* Safari 6.1-10.0 (but not 10.1) */
+// @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){ 
+// @media {
+// 	.footer {
+// 		.emailButton {
+// 			padding-top: 6px;
+// 		}
+// 	}
+// }}
