@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroImage from './HeroImage';
-import stringifyDates from '../services/stringifyDates';
+import stringifyDates from '../functions/stringifyDates';
 
 class Hero extends React.Component {
 	render() {
