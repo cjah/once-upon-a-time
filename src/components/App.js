@@ -15,7 +15,7 @@ import Footer from './Footer';
 	 };
 
 	 render() {
-		 if(!this.state.heroData) return null;
+		 if (!this.state.heroData) return null;
 
 		 return (
 			 <div>
