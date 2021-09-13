@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/once-upon-a-time/static/css/main.8e5f7352.chunk.css",
+    "main.js": "/once-upon-a-time/static/js/main.bc83296f.chunk.js",
+    "main.js.map": "/once-upon-a-time/static/js/main.bc83296f.chunk.js.map",
+    "runtime-main.js": "/once-upon-a-time/static/js/runtime-main.36d1d60f.js",
+    "runtime-main.js.map": "/once-upon-a-time/static/js/runtime-main.36d1d60f.js.map",
+    "static/js/2.601b1071.chunk.js": "/once-upon-a-time/static/js/2.601b1071.chunk.js",
+    "static/js/2.601b1071.chunk.js.map": "/once-upon-a-time/static/js/2.601b1071.chunk.js.map",
+    "index.html": "/once-upon-a-time/index.html",
+    "static/css/main.8e5f7352.chunk.css.map": "/once-upon-a-time/static/css/main.8e5f7352.chunk.css.map",
+    "static/js/2.601b1071.chunk.js.LICENSE.txt": "/once-upon-a-time/static/js/2.601b1071.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/once-upon-a-time/static/media/Springville-Regular3.7402f63b.otf",
+    "static/media/logo.4ac60799.svg": "/once-upon-a-time/static/media/logo.4ac60799.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.36d1d60f.js",
+    "static/js/2.601b1071.chunk.js",
+    "static/css/main.8e5f7352.chunk.css",
+    "static/js/main.bc83296f.chunk.js"
+  ]
+}
