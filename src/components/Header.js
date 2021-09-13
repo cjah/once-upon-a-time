@@ -7,7 +7,11 @@ const Header = () => {
 			<img src={Logo} alt='logo' />
 			<div>212.555.5555</div>
 			<button className="loginButton">LOGIN</button>
-			<button className='sandwich'><div className="lines"></div><div className="lines"></div><div className="lines"></div></button>
+			<button className='sandwich'>
+				<div className="lines"></div>
+				<div className="lines"></div>
+				<div className="lines"></div>
+			</button>
 		</div>
 	);
 };

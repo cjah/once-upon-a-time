@@ -3,73 +3,61 @@ import Card from './Card';
 import CardColumn from './CardColumn';
 import { withBreakpoints } from 'react-breakpoints';
 
-class MasonryGrid extends React.Component {
+const MasonryGrid = ({ breakpoints, currentBreakpoint, cards }) => {
 
-	sortCards = (cards) => {
-		return cards.sort((a,b) => {
+	const sortCards = (cards) => {
+		return cards.sort((a, b) => {
 			const cardA = new Date(a.date).getTime();
 			const cardB = new Date(b.date).getTime();
 
-			let comparison = 0;
-			if (cardA < cardB) comparison = 1;
-			else comparison = -1;
-			return comparison;
+			if (cardA < cardB) return 1;
+			else return -1;
 		});
 	};
 
-	buildDesktop = (cards) => {
+	const buildDesktop = (cards) => {
 		const columnsArr = [[],[],[]];
 
-		this.sortCards(cards).forEach((card, i) => {
+		cards.forEach((card, i) => {
 			columnsArr[i % 3].push(<Card cardData={card} key={card.title} />);
 		});
 
 		return columnsArr.map((cards, i) => <CardColumn cards={cards} key={i} />);
 	};
 
-	buildTablet = (cards) => {
+	const buildTablet = (cards) => {
 		const columnsArr = [[],[]];
 
-		this.sortCards(cards).forEach((card, i) => {
+		cards.forEach((card, i) => {
 			columnsArr[i % 2].push(<Card cardData={card} key={card.title} />);
 		});
 
 		return columnsArr.map((cards, i) => <CardColumn cards={cards} key={i} />);
 	};
 
-	buildMobile = (cards) => {
-		const columnsArr = [];
-		//can be refactored with map
-		this.sortCards(cards).forEach((card, i) => {
-			columnsArr.push(<Card cardData={card} key={card.title} />);
-		});
-
-		return <CardColumn cards={columnsArr} />;
+	const buildMobile = (cards) => {
+		return <CardColumn cards={cards.map((card, i) => <Card cardData={card} key={card.title} />)} />;
 	};
 
-	render() {
-		const { breakpoints, currentBreakpoint, cards } = this.props;
-
-		let sortedArr = this.sortCards(cards), cardColArr = [];
+		let sortedArr = sortCards(cards), cardColArr = [];
 
 		switch(breakpoints[currentBreakpoint]) {
 			case breakpoints.mobile:
-				cardColArr = this.buildMobile(sortedArr);
+				cardColArr = buildMobile(sortedArr);
 				break;
 			case breakpoints.smallTablet:
-				cardColArr = this.buildTablet(sortedArr);
+				cardColArr = buildTablet(sortedArr);
 				break;
 			case breakpoints.tablet:
-				cardColArr = this.buildTablet(sortedArr);
+				cardColArr = buildTablet(sortedArr);
 				break;
 			case breakpoints.desktop:
-				cardColArr = this.buildDesktop(sortedArr);
+				cardColArr = buildDesktop(sortedArr);
 				break;
 			case breakpoints.largeDesktop:
-				cardColArr = this.buildDesktop(sortedArr);
+				cardColArr = buildDesktop(sortedArr);
 				break;
 			default:
-				console.log('default')
 				break;
 		};
 
@@ -78,7 +66,6 @@ class MasonryGrid extends React.Component {
 				{cardColArr}
 			</div>
 		);
-	};
 };
 
 export default withBreakpoints(MasonryGrid);

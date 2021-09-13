@@ -3,14 +3,15 @@ import axios from 'axios';
 import Form from './Form';
 
 class Footer extends React.Component {
-	state = {
-		value: ''
-	};
+	state = { value: '' };
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		if(this.state.value === '') return;
+
+		if (this.state.value === '') return;
+
 		axios.post('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge', { email: this.state.value });
+
 		this.setState({ value: '', successEmail: true });
 	};
 
