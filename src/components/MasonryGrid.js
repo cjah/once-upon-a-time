@@ -41,6 +41,7 @@ const MasonryGrid = ({ breakpoints, currentBreakpoint, cards }) => {
 
 		let sortedArr = sortCards(cards), cardColArr = [];
 
+		//using react-breakpoints to build dynamic components based on screen width
 		switch(breakpoints[currentBreakpoint]) {
 			case breakpoints.mobile:
 				cardColArr = buildMobile(sortedArr);
@@ -61,11 +62,7 @@ const MasonryGrid = ({ breakpoints, currentBreakpoint, cards }) => {
 				break;
 		};
 
-		return (
-			<div className="masonryGrid">
-				{cardColArr}
-			</div>
-		);
+		return <div className="masonryGrid">{cardColArr}</div>
 };
 
 export default withBreakpoints(MasonryGrid);

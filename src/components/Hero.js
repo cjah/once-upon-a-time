@@ -3,6 +3,7 @@ import HeroImage from './HeroImage';
 import stringifyDates from '../functions/stringifyDates';
 
 const Hero = ({ heroText, heroData }) => {
+	//stringifyDates converts api data to correct format
 	const dateText = stringifyDates(heroText.date), title = heroText.title.slice(11), subtitle = heroText.subtitle;
 
 	return (

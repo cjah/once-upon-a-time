@@ -13,6 +13,7 @@ class HeroImage extends React.Component {
 	}
 
 	thumbnailClick = (i) => {
+		//handles clicking on thumbnail to change image and active thumbnail
 		this.setState({ activeIndex: i });
 		this.timer();
 	};
@@ -22,12 +23,14 @@ class HeroImage extends React.Component {
 	};
 
 	handleTouchEnd = (e) => {
+		//handles mobile swipe to change image
 		this.setState({ activeIndex: this.state.touchStart >= e.changedTouches[0].clientX ? (this.state.activeIndex + 1) % 3 : this.state.activeIndex === 0 ? 2 : this.state.activeIndex - 1 });
 		this.timer();
 	};
 
 	render() {
-		const imageArr = this.props.heroData.map((src, i) => {
+		//builds images in Hero
+		const imagesArr = this.props.heroData.map((src, i) => {
 			return (
 				<div
 					className={i === this.state.activeIndex ? 'heroImage active' : 'heroImage'}
@@ -38,16 +41,15 @@ class HeroImage extends React.Component {
 			);
 		});
 
+		//builds thumbnails
 		const thumbnails = this.props.heroData.map((el, i) => {
 			return <li className={i === this.state.activeIndex ? 'activeThumbnail' : ''} ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
 		});
 
 		return (
 			<div>
-				{imageArr}
-				<ol>
-					{thumbnails}
-				</ol>
+				{imagesArr}
+				<ol>{thumbnails}</ol>
 				<div className="shade" />
 				<div
 					className="outerLayer"

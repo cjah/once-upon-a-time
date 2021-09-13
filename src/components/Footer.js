@@ -8,6 +8,7 @@ class Footer extends React.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 
+		//can't submit empty email
 		if (this.state.value === '') return;
 
 		axios.post('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge', { email: this.state.value });
@@ -23,7 +24,11 @@ class Footer extends React.Component {
 		return (
 			<div className="footer">
 				<div className="newsletter">{ this.state.successEmail ? 'Thank you for signing up!' : 'Sign up for our Newsletter' }</div>
-				<Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} value={this.state.value} />
+				<Form
+					handleSubmit={this.handleSubmit}
+					handleChange={this.handleChange}
+					value={this.state.value}
+				/>
 				<div className="socials"> 2021 <hr className="hr"></hr>  SPARTA PLAESENT - <span className="socialText">INSTAGRAM</span> - <span className="socialText">FACEBOOK</span> - <span className="socialText">TWITTER</span>
 				</div>
 			</div>
