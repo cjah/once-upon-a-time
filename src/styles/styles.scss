@@ -267,6 +267,9 @@ body {
 		padding-left: 18px;
 		font-family: 'ACaslonPro';
 		font-size: 15px;
+		-webkit-appearance: none;
+		-webkit-border-radius: 0; 
+		border-radius: 0;
 		
 		&::placeholder {
 			color: black;
