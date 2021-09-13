@@ -83,6 +83,12 @@ body {
 			opacity: 1;
 			color: black;
 		}
+		.lines:nth-child(1) {
+			margin-top: 18px;
+		}
+		.lines:nth-child(2) {
+			margin-bottom: 18px;
+		}
 	}
 }
 
@@ -292,6 +298,17 @@ body {
 		
 		&:before {
 			content: '\00A9'
+		}
+
+		.hr {
+			border-bottom: 1px solid black;
+			width: 12px;
+			margin-bottom: 2px;
+			display: inline-block;
+		}
+
+		.socialText {
+			text-decoration: underline;
 		}
 	}
 }

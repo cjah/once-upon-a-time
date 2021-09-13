@@ -22,7 +22,7 @@ class Footer extends React.Component {
 			<div className="footer">
 				<div className="newsletter">{ this.state.successEmail ? 'Thank you for signing up!' : 'Sign up for our Newsletter' }</div>
 				<Form handleSubmit={this.handleSubmit} handleChange={this.handleChange} value={this.state.value} />
-				<div className="socials"> 2021 <hr style={{ borderBottom: '1px solid black', width: '12px', marginBottom: '2px', display: 'inline-block' }}></hr>  SPARTA PLAESENT - <span style={{ textDecoration: 'underline' }}>INSTAGRAM</span> - <span style={{ textDecoration: 'underline' }}>FACEBOOK</span> - <span style={{ textDecoration: 'underline' }}>TWITTER</span>
+				<div className="socials"> 2021 <hr className="hr"></hr>  SPARTA PLAESENT - <span className="socialText">INSTAGRAM</span> - <span className="socialText">FACEBOOK</span> - <span className="socialText">TWITTER</span>
 				</div>
 			</div>
 		)

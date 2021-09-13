@@ -2,26 +2,21 @@ import React from 'react';
 import HeroImage from './HeroImage';
 import stringifyDates from '../functions/stringifyDates';
 
-class Hero extends React.Component {
-	render() {
-		console.log('in Hero')
-		console.log(this.props)
+const Hero = ({ heroText, heroData }) => {
+	const dateText = stringifyDates(heroText.date), title = heroText.title.slice(11), subtitle = heroText.subtitle;
 
-		var dateText = stringifyDates(this.props.heroText.date), title = this.props.heroText.title.slice(11), subtitle = this.props.heroText.subtitle;
-
-		return (
-			<div className="hero">
-				<HeroImage heroData={this.props.heroData} />
-				<div className="heroText">
-					<div className="heroTitle">Screening: <br />{title}</div>
-					<br />
-					<div className="heroDate">{dateText}</div>
-					<br />
-					<div className="heroSubtitle">{subtitle}</div>
-				</div>
+	return (
+		<div className="hero">
+			<HeroImage heroData={heroData} />
+			<div className="heroText">
+				<div className="heroTitle">Screening: <br />{title}</div>
+				<br />
+				<div className="heroDate">{dateText}</div>
+				<br />
+				<div className="heroSubtitle">{subtitle}</div>
 			</div>
-		)
-	}
+		</div>
+	)
 };
 
 export default Hero;

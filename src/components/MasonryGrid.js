@@ -49,8 +49,6 @@ class MasonryGrid extends React.Component {
 
 	render() {
 		const { breakpoints, currentBreakpoint, cards } = this.props;
-		console.log(currentBreakpoint)
-		console.log(breakpoints[currentBreakpoint])
 
 		let sortedArr = this.sortCards(cards), cardColArr = [];
 

@@ -1,11 +1,9 @@
 import React from 'react';
 
-class CardColumn extends React.Component {
-	render() {
-		return (
-			<div className="cardColumn">{this.props.cards}</div>
-		)
-	}
+const CardColumn = ({ cards }) => {
+	return (
+		<div className="cardColumn">{cards}</div>
+	)
 }
 
 export default CardColumn;

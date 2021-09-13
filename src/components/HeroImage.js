@@ -10,20 +10,17 @@ class HeroImage extends React.Component {
 	}
 
 	render() {
-		var imageArr = [], thumbnails = [];
-		
-		//if (this.props.heroData) {
-			clearTimeout(this.state.timeout);
-			this.state.timeout = setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000);
+		//refactor to not use this.state.timeout =
+		clearTimeout(this.state.timeout);
+		this.state.timeout = setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000);
 
-			imageArr = this.props.heroData.map((src, i) => {
-				return <div className={i === this.state.activeIndex ? 'heroImage active' : 'heroImage'} style={{ backgroundImage: "url(" + src.image + ")", ariaLabel: src.alt }} key={src.alt} ref={i} />
-			});
+		const imageArr = this.props.heroData.map((src, i) => {
+			return <div className={i === this.state.activeIndex ? 'heroImage active' : 'heroImage'} style={{ backgroundImage: "url(" + src.image + ")", ariaLabel: src.alt }} key={src.alt} ref={i} />
+		});
 
-			thumbnails = this.props.heroData.map((el, i) => {
-				return <li className={i === this.state.activeIndex ? 'activeThumbnail' : ''} ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
-			});
-		//}
+		const thumbnails = this.props.heroData.map((el, i) => {
+			return <li className={i === this.state.activeIndex ? 'activeThumbnail' : ''} ref={i} key={i + 'thumbnail'} onClick={(e) => this.thumbnailClick(i)}></li>
+		});
 
 		return (
 			<div>
