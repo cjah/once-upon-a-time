@@ -9,6 +9,7 @@ class Footer extends React.Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
+		if(this.state.value === '') return;
 		axios.post('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge', { email: this.state.value });
 		this.setState({ value: '', successEmail: true });
 	}
