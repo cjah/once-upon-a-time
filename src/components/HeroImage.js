@@ -1,29 +1,32 @@
 import React from 'react';
 
 class HeroImage extends React.Component {
-	state = {
-		activeIndex: 0,
-	};
+	state = { activeIndex: 0 };
+
+	componentDidMount() {
+		this.timer();
+	}
+
+	timer = () => {
+		clearTimeout(this.state.timeout);
+		this.setState({ timeout: setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000) });
+	}
 
 	thumbnailClick = (i) => {
-		this.setState({ activeIndex: i});
+		this.setState({ activeIndex: i });
+		this.timer();
 	};
 
 	handleTouchStart = (e) => {
-		console.log('handleTouchStart', e.changedTouches[0].clientX);
-		this.setState({ touchStart: e.changedTouches[0].clientX});
+		this.setState({ touchStart: e.changedTouches[0].clientX });
 	};
 
 	handleTouchEnd = (e) => {
-		console.log('handleTouchEnd', e.changedTouches[0].clientX);
-		this.setState({ activeIndex: this.state.touchStart < e.changedTouches[0].clientX ? (this.state.activeIndex + 1) % 3 : this.state.activeIndex === 0 ? 2 : this.state.activeIndex - 1 });
+		this.setState({ activeIndex: this.state.touchStart >= e.changedTouches[0].clientX ? (this.state.activeIndex + 1) % 3 : this.state.activeIndex === 0 ? 2 : this.state.activeIndex - 1 });
+		this.timer();
 	};
 
 	render() {
-		//refactor to not use this.state.timeout =
-		clearTimeout(this.state.timeout);
-		this.state.timeout = setTimeout(() => this.thumbnailClick((this.state.activeIndex + 1) % 3), 5000);
-		
 		const imageArr = this.props.heroData.map((src, i) => {
 			return (
 				<div
