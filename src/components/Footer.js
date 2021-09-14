@@ -5,15 +5,20 @@ import Form from './Form';
 class Footer extends React.Component {
 	state = { value: '' };
 
-	handleSubmit = (e) => {
+	handleSubmit = async (e) => {
 		e.preventDefault();
 
 		//can't submit empty email
 		if (this.state.value === '') return;
 
-		axios.post('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge', { email: this.state.value });
-
-		this.setState({ value: '', successEmail: true });
+		try { 
+			await axios.post('https://s0nshulo19.execute-api.us-east-1.amazonaws.com/default/code-challenge', { email: this.state.value });
+			this.setState({ value: '', successEmail: true });
+		} catch(error) {
+			console.log(error);
+		} finally {
+			//this executes after whether error or not
+		}
 	};
 
 	handleChange = (e) => {

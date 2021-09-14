@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({ value, handleChange, handleSubmit}) => {
+const Form = ({ value, handleChange, handleSubmit }) => {
 	return (
 		<form onSubmit={handleSubmit}>
 			<input
